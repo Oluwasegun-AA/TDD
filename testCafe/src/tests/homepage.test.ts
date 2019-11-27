@@ -1,10 +1,7 @@
 import { Selector } from 'testcafe';
-import dotenv from 'dotenv';
+import setupFixture from '../common/index';
 
-dotenv.config();
-const { WEBSITE_URL } = process.env;
-
-fixture`Home page test`.page`${WEBSITE_URL}`;
+setupFixture('WEBSITE_URL');
 
 test('navigation bar', async (view: any) => {
   const blinkText = await Selector('.blink').innerText;
@@ -15,9 +12,9 @@ test('navigation bar', async (view: any) => {
 
 test('login button', async (view: any) => {
   await view.click('.login')
-  .typeText('.username', 'shegsteham')
-  .typeText('.password', 'P@ssword123')
-  .click('.button.loginBtn');
+    .typeText('.username', 'shegsteham')
+    .typeText('.password', 'P@ssword123')
+    .click('.button.loginBtn');
   const loginPageText = await Selector('#notMember').find('span').innerText;
   await view.expect(loginPageText).eql('Not a member? ');
 });
