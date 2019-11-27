@@ -1,9 +1,9 @@
 import { Selector } from 'testcafe';
-import setupFixture from '../common/index';
+import setupFixture from '../common/fixtureSetup';
 
-setupFixture('WEBSITE_URL');
+setupFixture('Test Signup Route', 'WEBSITE_URL');
 
-test('login button', async (view: any) => {
+test('signup button', async (view: any) => {
   await view.click('.signup')
     .typeText('.username', 'shegs')
     .typeText('.email', 'oluwasegunadepoju@gmail.com')

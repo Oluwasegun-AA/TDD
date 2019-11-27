@@ -1,7 +1,7 @@
 import { Selector } from 'testcafe';
-import setupFixture from '../common/index';
+import setupFixture from '../common/fixtureSetup';
 
-setupFixture('WEBSITE_URL');
+setupFixture('Test Home Page','WEBSITE_URL');
 
 test('navigation bar', async (view: any) => {
   const blinkText = await Selector('.blink').innerText;
