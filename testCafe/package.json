@@ -1,12 +1,12 @@
 {
-  "name": "selenium",
+  "name": "testCafe",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": " yarn build && node dist/src/**/*.spec.js",
-    "build": "rm -rf dist && tsc -b",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "yarn build && testcafe chrome dist/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && tsc -b"
   },
   "keywords": [],
   "author": "",
@@ -14,14 +14,14 @@
   "dependencies": {
     "concurrently": "5.0.0",
     "dotenv": "8.2.0",
-    "selenium-webdriver": "^4.0.0-alpha.5",
+    "lodash": "4.17.15",
+    "testcafe": "1.7.0",
     "tslint": "5.20.1",
     "tslint-config-airbnb": "5.11.2",
     "typescript": "3.7.2"
   },
   "devDependencies": {
     "@types/dotenv": "8.2.0",
-    "@types/node": "12.12.12",
-    "@types/selenium-webdriver": "4.0.5"
+    "@types/node": "12.12.12"
   }
 }
