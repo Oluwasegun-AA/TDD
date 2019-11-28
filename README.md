@@ -32,13 +32,17 @@
 ## Installation
 
 ```sh
-npm install
+cd cypress || selenium || testcafe || puppeteer
+
+yarn || npm install
+
+yarn start || npm start
 ```
 
 ## Run tests
 
 ```sh
-yarn test
+yarn start || npm start
 ```
 
 ## Known Issues
