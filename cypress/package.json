@@ -1,19 +1,19 @@
 {
-  "name": "testCafe",
+  "name": "cypress",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "yarn build && testcafe chrome dist/tests/*.js",
+    "open": "yarn build && cypress open",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf dist && tsc -b"
   },
   "keywords": [],
   "author": "",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
+    "cypress": "3.6.1",
     "dotenv": "8.2.0",
-    "testcafe": "1.7.0",
     "tslint": "5.20.1",
     "tslint-config-airbnb": "5.11.2",
     "typescript": "3.7.2"
