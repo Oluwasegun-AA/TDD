@@ -5,8 +5,8 @@ setupFixture('Test Signup Route', 'WEBSITE_URL');
 
 test('signup button', async (view: any) => {
   await view.click('.signup')
-    .typeText('.username', 'shegs')
-    .typeText('.email', 'oluwasegunadepoju@gmail.com')
+    .typeText('.username', 'username')
+    .typeText('.email', 'user@email.com')
     .typeText('.password', 'password')
     .typeText('#confirmPassword', 'password')
     .click('.button.loginBtn');
