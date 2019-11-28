@@ -12,7 +12,7 @@ test('navigation bar', async (view: any) => {
 
 test('login button', async (view: any) => {
   await view.click('.login')
-    .typeText('.username', 'shegs')
+    .typeText('.username', 'username')
     .typeText('.password', 'password')
     .click('.button.loginBtn');
   const loginPageText = await Selector('#notMember').find('span').innerText;

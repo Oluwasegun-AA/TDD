@@ -13,8 +13,8 @@ const login: any = async (): Promise<any> => {
   const username = await driver.findElement(By.className('username'));
   const password = await driver.findElement(By.className('password'));
   const submitBtn = await driver.findElement(By.className('loginButtonDiv')).findElement(By.css('button'));
-  await username.sendKeys('shegsteham');
-  await password.sendKeys('p@ssword123');
+  await username.sendKeys('username');
+  await password.sendKeys('password');
   await submitBtn.click();
   // } finally {
   //   await driver.quit();

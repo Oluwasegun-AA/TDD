@@ -1,6 +1,3 @@
-import dotenv from 'dotenv';
-
-dotenv.config;
 // ***********************************************************
 // This example plugins/index.js can be used to load plugins
 //
@@ -14,9 +11,7 @@ dotenv.config;
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-module.exports = (_on: any, config: any) => {
-  config.env = process.env;
+module.exports = (_on: any, _config: any) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
-  return config;
-}
+};
