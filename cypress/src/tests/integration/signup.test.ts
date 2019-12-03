@@ -33,5 +33,8 @@ context('Landing page elements', () => {
     .click().wait(1000);
     cy.get('.button.loginBtn').should('be.visible')
     .click();
+    cy.location().should((location: any) => {
+      expect(location.pathname).to.eq('/signup');
+    })
   });
 });

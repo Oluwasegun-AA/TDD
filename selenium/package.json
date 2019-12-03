@@ -12,6 +12,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "chai": "4.2.0",
     "concurrently": "5.0.0",
     "dotenv": "8.2.0",
     "selenium-webdriver": "^4.0.0-alpha.5",
@@ -20,6 +21,7 @@
     "typescript": "3.7.2"
   },
   "devDependencies": {
+    "@types/chai": "4.2.6",
     "@types/dotenv": "8.2.0",
     "@types/node": "12.12.12",
     "@types/selenium-webdriver": "4.0.5"

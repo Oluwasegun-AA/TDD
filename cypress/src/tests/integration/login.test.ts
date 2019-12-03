@@ -29,5 +29,8 @@ context('Landing page elements', () => {
     .click();
     cy.get('.button.loginBtn').should('be.visible')
     .click();
+    cy.location().should((location: any) => {
+      expect(location.pathname).to.eq('/login');
+    })
   });
 });

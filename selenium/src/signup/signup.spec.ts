@@ -1,4 +1,5 @@
 import { By } from 'selenium-webdriver';
+import { expect } from 'chai';
 import dotenv from 'dotenv';
 import driver from '../../config/index';
 
@@ -16,12 +17,16 @@ const signup: any = async (): Promise<any> => {
     await driver.findElement(By.id('confirmPassword')).sendKeys('password');
     const submitBtn: any = await driver.findElement(By.className('signupButtonDiv')).findElement(By.css('button'));
     await submitBtn.click();
-  }catch (err) {
+    await driver.findElement(By.className('blin blink'))
+    .getText().then((value: string) => {
+      expect(value).to.equal('Always');
+    });
+  } catch (err) {
     console.log('an error occurred', err);
   }
-  // } finally {
-  //   await driver.quit();
-  // }
+  finally {
+    await driver.quit();
+  }
 };
 
 signup();
