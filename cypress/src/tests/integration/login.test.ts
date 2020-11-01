@@ -20,7 +20,7 @@ context('Landing page elements', () => {
     });
   });
 
-  it('should be attempt login', () => {
+  it('should attempt login', () => {
     cy.get('.username').should('be.visible')
     .type('username');
     cy.get('.password').should('be.visible')

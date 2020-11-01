@@ -18,9 +18,9 @@ const signup: any = async (): Promise<any> => {
     const submitBtn: any = await driver.findElement(By.className('signupButtonDiv')).findElement(By.css('button'));
     await submitBtn.click();
     await driver.findElement(By.className('blin blink'))
-    .getText().then((value: string) => {
-      expect(value).to.equal('Always');
-    });
+      .getText().then((value: string) => {
+        expect(value).to.equal('Always');
+      });
   } catch (err) {
     console.log('an error occurred', err);
   }
